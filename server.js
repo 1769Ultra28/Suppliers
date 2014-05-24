@@ -198,7 +198,7 @@ app.post('/saveUser', function(req, res){
 	$password = req.body.password;
 	$email = req.body.email;
 
-	$salt = 'salt';
+	$salt = '84]{>9#Dcdv(@FH@7UXu&a';
 
 	//Encrypt password
 

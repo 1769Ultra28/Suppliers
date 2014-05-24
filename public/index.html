@@ -1,0 +1,42 @@
+<html ng-app="profitRC">
+<head>
+	<title>Profit NC</title>
+
+	 <script src="js/lib/angular.min.js"></script>
+	 <script src="js/lib/jquery-1.11.1.min.js"></script>
+
+	 <script src="js/script.js"></script>
+
+</head>
+<body>
+
+	<form method="post" action="/saveData">
+		
+		<input id="nowFormated" name="nowFormated" value=""></input>
+		<input type="submit" value="save"></input>
+
+	</form>
+
+	<form method="post" action="/saveUser">
+		
+		<input id="username" name="username" placeholder="username" value=""></input>
+		<input id="password" name="password" placeholder="password" type="password" value=""></input>
+		<input id="email" name="email" placeholder="email" value=""></input>
+		<input type="submit" value="save user"></input>
+
+	</form>
+
+	<div ng-controller="mainController">
+
+		<ul>
+			<li ng-repeat="supplier in suppliers">
+				<h1>{{supplier.prov_des}}</h1>
+				<span>{{supplier.rif}}</span>
+				<span>{{supplier.co_zon}}</span>
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+</html>

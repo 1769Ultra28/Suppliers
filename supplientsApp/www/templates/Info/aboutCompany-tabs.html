@@ -1,0 +1,20 @@
+<!--   <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons> -->
+  
+ <!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-assertive">
+
+  <ion-tab title="Empresa" icon="icon ion-briefcase" href="#/aboutCompany/information">
+    <ion-nav-view name="information-tab"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Misión y Visión" icon="icon ion-filing" href="#/aboutCompany/mission">
+    <ion-nav-view name="mission-tab"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

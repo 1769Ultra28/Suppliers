@@ -1,4 +1,14 @@
 1769Ultra28
 ===========
 
-Comments for project RC
+ServerSide App ^ Mobile Client App
+
+oF 
+
+Getters and Setters 
+
+4
+
+Suppliers and Clients 
+
+@2K12

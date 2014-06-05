@@ -1,0 +1,113 @@
+<ion-view title="Datos del Proveedor {{supplier.prov_des}}">
+<ion-content class="has-header">
+<div class="list">
+
+	<a class="item item-icon-left item-icon-right">
+		<i class="icon ion-person"></i>
+		Nombre de la empresa
+		<span class="item-note">
+			{{supplier.prov_des}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right">
+		<i class="icon ion-person"></i>
+		R.I.F.
+		<span class="item-note">
+			{{supplier.rif}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left" href="#">
+		<i class="icon ion-email"></i>
+		Email
+		<span class="item-note">
+			{{supplier.email}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-person"></i>
+		Zona
+		<span class="item-note">
+			{{supplier.zon_des}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-iphone"></i>
+		Telefonos
+		<span class="item-note">
+			{{supplier.telefonos}}
+		</span>
+		<i class="icon ion-ios7-telephone-outline"></i>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-map"></i>
+		Codigo Postal
+		<span class="item-note">
+			{{supplier.zip}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-map"></i>
+		Dirección
+		<span class="item-note">
+			{{supplier.direc1}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-map"></i>
+		Dirección Alterna
+		<span class="item-note">
+
+			{{supplier.direc2}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-location"></i>
+		Ciudad
+		<span class="item-note">
+			{{supplier.ciudad}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-printer"></i>
+		FAX
+		<span class="item-note">
+			{{supplier.fax}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left" href="#">
+		<i class="icon ion-earth"></i>
+		Pagina Web
+		<span class="item-note">
+			{{supplier.website}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left" href="#">
+		<i class="icon ion-person"></i>
+		Contacto
+		<span class="item-note">
+			{{supplier.respons}}
+		</span>
+	</a>
+
+	<button class="button button-bar button-assertive" ng-click="showSendEmailConfirm()">
+		Enviar Correo a {{supplier.email}}
+	</button>
+
+</div>
+
+</ion-content>
+</ion-view>

@@ -1,0 +1,88 @@
+<ion-view title="Datos del cliente">
+<ion-nav-buttons side="left">
+<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+</ion-nav-buttons>
+<ion-content class="has-header">
+
+<!-- <form method="post" action="cssc.mine.nu:15001/saveClient"> -->
+<form method="post" id="RoyLOL">
+
+
+	<div class="list">
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Nombre de Empresa</span>
+			<input id="cli_des" type="text" placeholder="EJM: Compresores Servicios">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">R.I.F.</span>
+			<input id="rif" type="text" placeholder="EJM: J090288210">
+		</label>
+
+		<label class="item item-input item-select">
+			<div class="input-label">
+				Zona
+			</div>
+			<select ng-model="zoneSelected" ng-options="zone.zon_des for zone in zones"></select>
+		</label>
+
+		<label class="item item-input item-select">
+			<div class="input-label">
+				Vendedor
+			</div>
+			<select ng-model="sellerSelected" ng-options="seller.ven_des for seller in sellers"></select>
+		</label>
+
+
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Ciudad</span>
+			<input id="ciudad" type="text" placeholder="EJM: San Cristobal">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Codigo Postal</span>
+			<input id="zip" type="text" placeholder="EJM: 5001">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Telefonos</span>
+			<input id="telefonos" type="text" placeholder="EJM: 0276-3416373 / 0414-7229901">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">FAX</span>
+			<input id="fax" type="text" placeholder="EJM: 0276-3416373">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Contacto</span>
+			<input id="respons" type="text" placeholder="Alba De Sillie">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Email</span>
+			<input id="email" type="text" placeholder="coservica@gmail.com">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Pagina Web</span>
+			<input id="website" type="text" placeholder="www.compresoresservicios.com">
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Dirección</span>
+			<textarea id="direc1" placeholder="Calle 10 entre carreras 13 y 15 - Frente al Cuartel Bolívar."></textarea>
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Direccion alterna:</span>
+			<textarea id="direc2" placeholder="Sucursal. Calle 9 frente a la bomba 'El Diamante de Táriba'"></textarea>
+		</label>
+
+		<div class="button-bar">
+			<button type="submit" class="button button-assertive ion-person-add ion-home">
+				Guardar Cliente
+			</button>	
+			<input type="submit" value="SAVE CLIENT"></input>
+
+		</div>
+	</div>
+
+</form>
+
+
+
+
+</ion-content>
+</ion-view>

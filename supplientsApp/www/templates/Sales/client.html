@@ -1,0 +1,129 @@
+<ion-view title="Datos de {{client.cli_des}}">
+<ion-content class="has-header">
+
+<div class="list">
+
+	<a class="item item-icon-left item-icon-right">
+		<i class="icon ion-person"></i>
+		Nombre de la empresa
+		<span class="item-note">
+			{{client.cli_des}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right">
+		<i class="icon ion-person"></i>
+		R.I.F.
+		<span class="item-note">
+			{{client.rif}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-email"></i>
+		Email
+		<span class="item-note">
+			{{client.email}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-person"></i>
+		Zona
+		<span class="item-note">
+			{{client.zon_des}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-person"></i>
+		Vendedor
+		<span class="item-note">
+			{{client.ven_des}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-iphone"></i>
+		Telefonos
+		<span class="item-note">
+			{{client.telefonos}}
+		</span>
+		<i class="icon ion-ios7-telephone-outline"></i>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-map"></i>
+		Codigo Postal
+		<span class="item-note">
+			{{client.zip}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-map"></i>
+		Dirección
+		<span class="item-note">
+			{{client.direc1}}
+		</span>
+	</a>
+
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-map"></i>
+		Dirección Alterna
+		<span class="item-note">
+
+			{{client.direc2}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-location"></i>
+		Ciudad
+		<span class="item-note">
+			{{client.ciudad}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-printer"></i>
+		FAX
+		<span class="item-note">
+			{{client.fax}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-earth"></i>
+		Pagina Web
+		<span class="item-note">
+			{{client.website}}
+		</span>
+	</a>
+
+	<a class="item item-icon-left item-icon-right" href="#">
+		<i class="icon ion-person"></i>
+		Contacto
+		<span class="item-note">
+			{{client.respons}}
+		</span>
+	</a>
+	<div class="button-bar">
+		<button class="button button-assertive ion-email" ng-click="showSendEmailConfirm()">
+			Enviar Correo de Presentación a {{client.email}}
+		</button>		
+	</div>
+
+
+
+</div>
+
+
+
+</ion-content>
+</ion-view>

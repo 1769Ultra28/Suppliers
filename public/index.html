@@ -10,10 +10,12 @@
 </head>
 <body>
 
-	<form method="post" action="/saveData">
+	<form method="post" action="/saveClient">
 		
-		<input id="nowFormated" name="nowFormated" value=""></input>
-		<input type="submit" value="save"></input>
+		<input id="cli_des" name="cli_des" placeholder="cli_des" value=""></input>
+		<input id="telefonos" name="telefonos" placeholder="telefonos" value=""></input>
+		<input id="email" name="email" placeholder="email" value=""></input>
+		<input type="submit" value="save Client"></input>
 
 	</form>
 
@@ -24,7 +26,7 @@
 		<input id="email" name="email" placeholder="email" value=""></input>
 		<input type="submit" value="save user"></input>
 
-	</form>
+		</form>
 
 	<div ng-controller="mainController">
 

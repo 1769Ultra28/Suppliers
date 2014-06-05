@@ -1,4 +1,3 @@
-
 var express = require('express'),
 http = require('http'),
 crypto = require('crypto'),
@@ -86,79 +85,120 @@ app.post('/setClient', function(request, response){
   response.send(request.body);    // echo the result back
 
   var client = request.body;
-  $maxValues = 6;
   $nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
-
-  console.log(client.zoneSelected.co_zon);
-  console.log(client.sellerSelected.co_ven);
 
   var connection = new sql.Connection(config, function(err) {
   	var transaction = connection.transaction();
   	transaction.begin(function(err) {
-			//Execute first procedure
-			var reqProcClient = new sql.Request(transaction);
-			/*reqProcClient.input('sTabla', 'saProveedor');
-			reqProcClient.input('sCampo', 'co_prov');
-			reqProcClient.input('sPrefijo', 'FRIO');*/
-			reqProcClient.output('sResult', sql.int);
-			reqProcClient.execute('[dbo].[aAa_pObtenerProximoCLIENTEroy]', function(err, recordsets, returnValue) {
+  		var reqProcClient = new sql.Request(transaction);
+		//We could set this prefix anywhere in our app and bring it here... 
+		$prefix = 'FRIO';
+		// These 2 values depends of the table... 
+		$table = 'saCliente';
+		$pKey = "co_cli";
+		reqProcClient.input('sTabla', $table);
+		reqProcClient.input('sCampo', $pKey);
+		reqProcClient.input('sPrefijo', $prefix);
+		reqProcClient.execute('[dbo].[pObtenerProximoNumero]', function(err, recordsets, returnValue) {
+			if(err){
+				console.log('Error requesting procedure');
+			}
+			else{
+				$nextCode = recordsets[0][0].Codigo.toString().trim();
+				$proxNum = parseInt($nextCode.substr($prefix.length))+1;
+				$nextCode = $nextCode.substring(0,$nextCode.length-$proxNum.toString().length).concat($proxNum.toString());
+				console.log('Se va a insertar el codigo: '+$nextCode);
+				//Inserting
+				$consultSql = "INSERT [dbo].[saCliente] ([co_cli], [tip_cli], [cli_des], [direc1], [dir_ent2], [direc2], [telefonos], [fax], [inactivo], [comentario], [respons], [fecha_reg], [puntaje], [mont_cre], [co_mone], [cond_pag], [plaz_pag], [desc_ppago], [co_zon], [co_seg], [co_ven], [desc_glob], [horar_caja], [frecu_vist], [lunes], [martes], [miercoles], [jueves], [viernes], [sabado], [domingo], [rif], [nit], [contrib], [numcom], [feccom], [dis_cen], [email], [co_cta_ingr_egr], [juridico], [tipo_adi], [matriz], [co_tab], [tipo_per], [valido], [ciudad], [zip], [login], [password], [website], [sincredito], [contribu_e], [rete_regis_doc], [porc_esp], [co_pais], [serialp], [Id], [salestax], [estado], [campo1], [campo2], [campo3], [campo4], [campo5], [campo6], [campo7], [campo8], [co_us_in], [fe_us_in], [co_sucu_in], [co_us_mo], [fe_us_mo], [co_sucu_mo], [revisado], [trasnfe]) VALUES ('"+ $nextCode+"', N'MA    ','"+client.cli_des+"' , '"+client.direc1+"', NULL, NULL, '"+client.telefonos+"', '"+client.fax+"', 0, NULL, '"+client.respons+"', CAST('"+$nowFormated+"' AS SmallDateTime), 0, CAST(0.00 AS Decimal(18, 2)), N'BSF   ', N'01    ', 0, CAST(0.00 AS Decimal(18, 2)), '"+client.zoneSelected.co_zon+"', N'04    ', '"+client.sellerSelected.co_ven+"', CAST(0.00 AS Decimal(18, 2)), NULL, NULL, 0, 0, 0, 0, 0, 0, 0, '"+client.rif+"', NULL, 1, NULL, NULL, NULL, '"+client.email+"', N'00                  ', 0, 1, NULL, NULL, NULL, 0, '"+client.ciudad+"', NULL, NULL, NULL, '"+client.website+"', 0, 0, 0, CAST(0.00 AS Decimal(18, 2)), N'VE    ', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ROY   ', CAST('"+$nowFormated+"' AS DateTime), N'01    ', N'ROY   ', CAST('"+$nowFormated+"' AS DateTime), N'01    ', NULL, NULL)";
+				var reqInsert = new sql.Request(transaction);
+				reqInsert.query($consultSql, function(err, recordset) {
+					if(err){
+						console.log('Error requesting Insert');
+			    			//response.json(err);
+			    			transaction.rollback(function(err) {
+			    				console.log('Error in insert... rollback!!!!');
+			    			});	
+			    		}
+			    		else{
+			    			transaction.commit(function(err, recordset) {
+			    				if(err){
+			    					console.log('Error commiting insert');
+			    					//response.json(err);
+			    				}
+			    				else{
+			    					console.log('Registro guardado con éxito');
+			    					response.json(200, {status: 'Client inserted successfully :D'});
+			    				}   	
 
-				if(err){
-					console.log('Error req procedure');
-					res.json(err);
-				}
-				else{
-					console.log('El Siguiente Cliente sera: '+returnValue);
-					$co_prov = returnValue;
-
-			    	//Ajustando el codigo... 
-			    	$values = String($co_prov).length;
-			    	$codRest = $maxValues - $values;
-			    	$cod = "";
-			    	for (var i = 0; i < $codRest; i++) {
-			    		$cod = $cod + "0";
-			    	}
-			    	$co_prov = "FRIO"+$cod+$co_prov;
-			    	$consultSql = "INSERT [dbo].[saCliente] ([co_cli], [tip_cli], [cli_des], [direc1], [dir_ent2], [direc2], [telefonos], [fax], [inactivo], [comentario], [respons], [fecha_reg], [puntaje], [mont_cre], [co_mone], [cond_pag], [plaz_pag], [desc_ppago], [co_zon], [co_seg], [co_ven], [desc_glob], [horar_caja], [frecu_vist], [lunes], [martes], [miercoles], [jueves], [viernes], [sabado], [domingo], [rif], [nit], [contrib], [numcom], [feccom], [dis_cen], [email], [co_cta_ingr_egr], [juridico], [tipo_adi], [matriz], [co_tab], [tipo_per], [valido], [ciudad], [zip], [login], [password], [website], [sincredito], [contribu_e], [rete_regis_doc], [porc_esp], [co_pais], [serialp], [Id], [salestax], [estado], [campo1], [campo2], [campo3], [campo4], [campo5], [campo6], [campo7], [campo8], [co_us_in], [fe_us_in], [co_sucu_in], [co_us_mo], [fe_us_mo], [co_sucu_mo], [revisado], [trasnfe]) VALUES ('"+ $co_prov+"', N'MA    ','"+client.cli_des+"' , '"+client.direc1+"', NULL, NULL, '"+client.telefonos+"', '"+client.fax+"', 0, NULL, '"+client.respons+"', CAST('"+$nowFormated+"' AS SmallDateTime), 0, CAST(0.00 AS Decimal(18, 2)), N'BSF   ', N'01    ', 0, CAST(0.00 AS Decimal(18, 2)), N'TAC   ', N'04    ', N'08    ', CAST(0.00 AS Decimal(18, 2)), NULL, NULL, 0, 0, 0, 0, 0, 0, 0, '"+client.rif+"', NULL, 1, NULL, NULL, NULL, '"+client.email+"', N'00                  ', 0, 1, NULL, NULL, NULL, 0, '"+client.ciudad+"', NULL, NULL, NULL, '"+client.website+"', 0, 0, 0, CAST(0.00 AS Decimal(18, 2)), N'VE    ', NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ROY   ', CAST('"+$nowFormated+"' AS DateTime), N'01    ', N'ROY   ', CAST('"+$nowFormated+"' AS DateTime), N'01    ', NULL, NULL)";
-			    	// console.log('Pase por Insertando Cliente...');
-
-			    	var request = new sql.Request(transaction);
-			    	console.log("El codigo de tales sera: "+$co_prov);
-
-					//Create first insert
-					request.query($consultSql, function(err, recordset) {
-						if(err){
-							console.log('Error Insert');
-							response.json(err);
-							transaction.rollback(function(err) {
-								console.log('Error in insert... rollback!!!!');
-							});	
-						}
-						else{
-
-							transaction.commit(function(err, recordset) {
-								if(err){
-									console.log('Error2');
-									response.json(err);
-								}
-								else{
-									console.log('Registro guardado con éxito');
-									response.json(200, {status: 'Client inserted successfully :D'});
-								}   	
-
-							});
-						}
-
-					});
-
-				}
-
-			});
-
+			    			});
+			    		}
+			    	});
+			}
+		});
+});
 });
 });
 
+app.post('/setSupplier', function(request, response){
+  //console.log(request.body);      // your JSON
+  response.send(request.body);    // echo the result back
+
+  var supplier = request.body;
+  $nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
+
+  var connection = new sql.Connection(config, function(err) {
+  	var transaction = connection.transaction();
+  	transaction.begin(function(err) {
+  		var reqProcClient = new sql.Request(transaction);
+		//We could set this prefix anywhere in our app and bring it here... 
+		$prefix = 'FRIO';
+		// These 2 values depends of the table... 
+		$table = 'saProveedor';
+		$pKey = "co_prov";
+		reqProcClient.input('sTabla', $table);
+		reqProcClient.input('sCampo', $pKey);
+		reqProcClient.input('sPrefijo', $prefix);
+		reqProcClient.execute('[dbo].[pObtenerProximoNumero]', function(err, recordsets, returnValue) {
+			if(err){
+				console.log('Error requesting procedure');
+			}
+			else{
+				$nextCode = recordsets[0][0].Codigo.toString().trim();
+				$proxNum = parseInt($nextCode.substr($prefix.length))+1;
+				$nextCode = $nextCode.substring(0,$nextCode.length-$proxNum.toString().length).concat($proxNum.toString());
+				console.log('Se va a insertar el codigo: '+$nextCode);
+				//Inserting
+				$consultSql = "INSERT [dbo].[saProveedor] ([co_prov], [prov_des], [co_seg], [co_zon], [tip_pro], [inactivo], [direc1], [direc2], [telefonos], [fax], [respons], [fecha_reg], [mont_cre], [co_mone], [cond_pag], [plaz_pag], [desc_ppago], [desc_glob], [rif], [nacional], [numcom], [feccom], [dis_cen], [nit], [email], [co_cta_ingr_egr], [comentario], [tipo_adi], [matriz], [co_tab], [tipo_per], [co_pais], [ciudad], [zip], [website], [formtype], [taxid], [contribu_e], [rete_regis_doc], [porc_esp], [campo1], [campo2], [campo3], [campo4], [campo5], [campo6], [campo7], [campo8], [co_us_in], [co_sucu_in], [fe_us_in], [co_us_mo], [co_sucu_mo], [fe_us_mo], [revisado], [trasnfe]) VALUES ('"+ $nextCode+"', '"+supplier.prov_des+"', N'04    ', '"+supplier.zoneSelected.co_zon+"', N'01    ', 0,'"+supplier.direc1+"' , NULL, '"+supplier.telefonos+"', '"+supplier.fax+"', '"+supplier.respons+"', CAST('"+$nowFormated+"' AS SmallDateTime), CAST(0.00 AS Decimal(18, 2)), N'BSF   ', N'01    ', 0, CAST(0.00 AS Decimal(18, 2)), CAST(0.00 AS Decimal(18, 2)), '"+supplier.rif+"', 1, NULL, NULL, NULL, NULL, '"+supplier.email+"', N'01                  ', N'Agregado en FRIO TECNOLOGIA 2014' , 1, NULL, NULL, N'3', N'VE    ','"+supplier.ciudad+"' , NULL, NULL, NULL, NULL, 1, 0, CAST(75.00 AS Decimal(18, 2)), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, N'ROY   ', N'01    ', CAST('"+$nowFormated+"' AS DateTime), N'ROY   ', N'01    ', CAST('"+$nowFormated+"' AS DateTime), N'C', NULL)";
+				var reqInsert = new sql.Request(transaction);
+				reqInsert.query($consultSql, function(err, recordset) {
+					if(err){
+						console.log('Error requesting Insert');
+			    			//response.json(err);
+			    			transaction.rollback(function(err) {
+			    				console.log('Error in insert... rollback!!!!');
+			    			});	
+			    		}
+			    		else{
+			    			transaction.commit(function(err, recordset) {
+			    				if(err){
+			    					console.log('Error commiting insert');
+			    					//response.json(err);
+			    				}
+			    				else{
+			    					console.log('Registro guardado con éxito');
+			    					response.json(200, {status: 'Client inserted successfully :D'});
+			    				}   	
+
+			    			});
+			    		}
+			    	});
+			}
+		});
 });
+});
+});
+
+
 
 
 

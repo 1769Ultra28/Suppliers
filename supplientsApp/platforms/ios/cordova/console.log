@@ -521,3 +521,170 @@ objc[20695]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.a
 2014-06-05 18:20:02.328 FRIO 2014[20695:80b] THREAD WARNING: ['EmailComposer'] took '31.647949' ms. Plugin should use a background thread.
 2014-06-05 18:20:58.376 FRIO 2014[20695:80b] 
 setSupplier :D
+objc[25014]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-06 05:10:09.210 FRIO 2014[25014:80b] Cannot find executable for CFBundle 0xbf306f0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-06 05:10:09.291 FRIO 2014[25014:80b] Cannot find executable for CFBundle 0xbb2c360 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-06 05:10:09.296 FRIO 2014[25014:80b] Cannot find executable for CFBundle 0xd6392f0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-06 05:10:09.706 FRIO 2014[25014:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 05:10:09.987 FRIO 2014[25014:80b] Unlimited access to network resources
+2014-06-06 05:10:11.438 FRIO 2014[25014:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-06 05:10:11.439 FRIO 2014[25014:80b] [CDVTimer][statusbar] 0.502050ms
+2014-06-06 05:10:11.439 FRIO 2014[25014:80b] [CDVTimer][TotalPluginStartup] 0.916004ms
+2014-06-06 05:10:11.934 FRIO 2014[25014:80b] Resetting plugins due to page load.
+2014-06-06 05:10:13.304 FRIO 2014[25014:80b] THREAD WARNING: ['Notification'] took '54.296143' ms. Plugin should use a background thread.
+2014-06-06 05:10:13.406 FRIO 2014[25014:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
+2014-06-06 05:12:42.944 FRIO 2014[25014:80b] 
+setSupplier :D
+2014-06-06 05:13:30.723 FRIO 2014[25014:80b] BIEN PELAO>>>> USTED.... BIEN xD
+2014-06-06 05:13:56.870 FRIO 2014[25014:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:13:56.870 FRIO 2014[25014:80b] ERROR: Error: 'undefined' is not an object (evaluating '$scope.sellerSelected.ven_des')
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/js/0salesControllers.js:33:125
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19980:34
+$eval@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20906:28
+$digest@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20732:36
+$apply@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:21012:31
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:41591:19
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11545:14
+forEach@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:9239:24
+eventHandler@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11544:12
+dispatchEvent@[native code]
+triggerMouseEvent@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2691:20
+tapClick@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2680:20
+tapTouchEnd@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2798:13
+2014-06-06 05:14:17.344 FRIO 2014[25014:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:14:17.383 FRIO 2014[25014:80b] THREAD WARNING: ['EmailComposer'] took '38.697021' ms. Plugin should use a background thread.
+2014-06-06 05:20:49.955 FRIO 2014[25014:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:20:49.960 FRIO 2014[25014:80b] ERROR: Error: 'undefined' is not an object (evaluating '$scope.sellerSelected.ven_des')
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/js/0salesControllers.js:33:125
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19980:34
+$eval@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20906:28
+$digest@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20732:36
+$apply@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:21012:31
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:41591:19
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11545:14
+forEach@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:9239:24
+eventHandler@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11544:12
+dispatchEvent@[native code]
+triggerMouseEvent@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2691:20
+tapClick@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2680:20
+tapTouchEnd@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2798:13
+2014-06-06 05:22:18.011 FRIO 2014[25014:80b] Ah Ah Ah (Mail Canceled)
+2014-06-06 05:22:20.084 FRIO 2014[25014:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:22:20.085 FRIO 2014[25014:80b] ERROR: Error: 'undefined' is not an object (evaluating '$scope.sellerSelected.ven_des')
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/js/0salesControllers.js:33:125
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19980:34
+$eval@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20906:28
+$digest@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20732:36
+$apply@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:21012:31
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:41591:19
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11545:14
+forEach@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:9239:24
+eventHandler@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11544:12
+dispatchEvent@[native code]
+triggerMouseEvent@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2691:20
+tapClick@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2680:20
+tapTouchEnd@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2798:13
+2014-06-06 05:22:22.588 FRIO 2014[25014:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:22:22.588 FRIO 2014[25014:80b] ERROR: Error: 'undefined' is not an object (evaluating '$scope.sellerSelected.ven_des')
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/js/0salesControllers.js:33:125
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19980:34
+$eval@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20906:28
+$digest@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20732:36
+$apply@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:21012:31
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:41591:19
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11545:14
+forEach@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:9239:24
+eventHandler@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11544:12
+dispatchEvent@[native code]
+triggerMouseEvent@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2691:20
+tapClick@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2680:20
+tapTouchEnd@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2798:13
+2014-06-06 05:22:24.289 FRIO 2014[25014:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:22:24.289 FRIO 2014[25014:80b] ERROR: Error: 'undefined' is not an object (evaluating '$scope.sellerSelected.ven_des')
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/js/0salesControllers.js:33:125
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+wrappedCallback@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19894:81
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:19980:34
+$eval@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20906:28
+$digest@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:20732:36
+$apply@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:21012:31
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:41591:19
+file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11545:14
+forEach@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:9239:24
+eventHandler@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:11544:12
+dispatchEvent@[native code]
+triggerMouseEvent@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2691:20
+tapClick@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2680:20
+tapTouchEnd@file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/lib/ionic/js/ionic.bundle.js:2798:13
+objc[25491]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-06 05:25:13.484 FRIO 2014[25491:80b] Cannot find executable for CFBundle 0xbb1ec20 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-06 05:25:13.502 FRIO 2014[25491:80b] Cannot find executable for CFBundle 0xbe3a080 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-06 05:25:13.520 FRIO 2014[25491:80b] Cannot find executable for CFBundle 0xbc794c0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-06 05:25:13.567 FRIO 2014[25491:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 05:25:13.603 FRIO 2014[25491:80b] Unlimited access to network resources
+2014-06-06 05:25:13.966 FRIO 2014[25491:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-06 05:25:13.966 FRIO 2014[25491:80b] [CDVTimer][statusbar] 0.416040ms
+2014-06-06 05:25:13.966 FRIO 2014[25491:80b] [CDVTimer][TotalPluginStartup] 0.782013ms
+2014-06-06 05:25:14.173 FRIO 2014[25491:80b] Resetting plugins due to page load.
+2014-06-06 05:25:14.763 FRIO 2014[25491:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
+2014-06-06 05:25:21.309 FRIO 2014[25491:80b] THREAD WARNING: ['NetworkStatus'] took '6480.927002' ms. Plugin should use a background thread.
+2014-06-06 05:25:21.356 FRIO 2014[25491:80b] THREAD WARNING: ['Notification'] took '15.246094' ms. Plugin should use a background thread.
+2014-06-06 05:25:32.513 FRIO 2014[25491:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:45:04.999 FRIO 2014[25491:80b] Felicitaciones :P (Mail Sended)
+objc[26045]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-06 05:47:16.344 FRIO 2014[26045:80b] Cannot find executable for CFBundle 0xc232c30 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-06 05:47:16.359 FRIO 2014[26045:80b] Cannot find executable for CFBundle 0xc145ee0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-06 05:47:16.373 FRIO 2014[26045:80b] Cannot find executable for CFBundle 0xc01ff30 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-06 05:47:16.425 FRIO 2014[26045:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 05:47:16.504 FRIO 2014[26045:80b] Unlimited access to network resources
+2014-06-06 05:47:16.895 FRIO 2014[26045:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-06 05:47:16.896 FRIO 2014[26045:80b] [CDVTimer][statusbar] 0.431001ms
+2014-06-06 05:47:16.896 FRIO 2014[26045:80b] [CDVTimer][TotalPluginStartup] 0.751019ms
+2014-06-06 05:47:17.078 FRIO 2014[26045:80b] Resetting plugins due to page load.
+2014-06-06 05:47:17.671 FRIO 2014[26045:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
+2014-06-06 05:47:20.672 FRIO 2014[26045:80b] THREAD WARNING: ['NetworkStatus'] took '2997.695068' ms. Plugin should use a background thread.
+2014-06-06 05:47:20.760 FRIO 2014[26045:80b] THREAD WARNING: ['Notification'] took '14.859863' ms. Plugin should use a background thread.
+2014-06-06 05:47:44.599 FRIO 2014[26045:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:52:06.428 FRIO 2014[26045:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 05:52:06.448 FRIO 2014[26045:80b] THREAD WARNING: ['EmailComposer'] took '19.635986' ms. Plugin should use a background thread.
+2014-06-06 05:52:26.033 FRIO 2014[26045:80b] Felicitaciones :P (Mail Sended)
+objc[26516]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-06 06:02:14.111 FRIO 2014[26516:80b] Cannot find executable for CFBundle 0xbc0c4d0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-06 06:02:14.144 FRIO 2014[26516:80b] Cannot find executable for CFBundle 0xbe2bff0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-06 06:02:14.156 FRIO 2014[26516:80b] Cannot find executable for CFBundle 0xc048e10 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-06 06:02:14.199 FRIO 2014[26516:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 06:02:14.236 FRIO 2014[26516:80b] Unlimited access to network resources
+2014-06-06 06:02:14.429 FRIO 2014[26516:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-06 06:02:14.429 FRIO 2014[26516:80b] [CDVTimer][statusbar] 0.475943ms
+2014-06-06 06:02:14.430 FRIO 2014[26516:80b] [CDVTimer][TotalPluginStartup] 0.858009ms
+2014-06-06 06:02:14.565 FRIO 2014[26516:80b] Resetting plugins due to page load.
+2014-06-06 06:02:19.426 FRIO 2014[26516:80b] THREAD WARNING: ['NetworkStatus'] took '4372.638184' ms. Plugin should use a background thread.
+2014-06-06 06:02:19.442 FRIO 2014[26516:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
+2014-06-06 06:03:52.026 FRIO 2014[26516:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 06:03:52.040 FRIO 2014[26516:80b] sdasd is not a valid email address.
+2014-06-06 06:03:52.040 FRIO 2014[26516:80b] THREAD WARNING: ['EmailComposer'] took '13.795898' ms. Plugin should use a background thread.
+2014-06-06 06:04:09.275 FRIO 2014[26516:80b] Felicitaciones :P (Mail Sended)
+2014-06-06 06:04:16.408 FRIO 2014[26516:80b] BIEN PELAO>>>> USTED.... BIEN xD
+2014-06-06 06:05:34.687 FRIO 2014[26516:80b] BIEN PELAO>>>> USTED.... BIEN xD
+2014-06-06 06:06:39.586 FRIO 2014[26516:80b] BIEN PELAO>>>> USTED.... BIEN xD
+objc[27102]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-06 06:31:37.148 FRIO 2014[27102:80b] Cannot find executable for CFBundle 0xbf45f90 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-06 06:31:37.180 FRIO 2014[27102:80b] Cannot find executable for CFBundle 0xbf5fd30 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-06 06:31:37.220 FRIO 2014[27102:80b] Cannot find executable for CFBundle 0xc2666e0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-06 06:31:37.320 FRIO 2014[27102:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 06:31:37.429 FRIO 2014[27102:80b] Unlimited access to network resources
+2014-06-06 06:31:37.731 FRIO 2014[27102:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-06 06:31:37.732 FRIO 2014[27102:80b] [CDVTimer][statusbar] 0.833035ms
+2014-06-06 06:31:37.733 FRIO 2014[27102:80b] [CDVTimer][TotalPluginStartup] 1.423001ms
+2014-06-06 06:31:37.936 FRIO 2014[27102:80b] Resetting plugins due to page load.
+2014-06-06 06:31:42.787 FRIO 2014[27102:80b] THREAD WARNING: ['NetworkStatus'] took '4203.802246' ms. Plugin should use a background thread.
+2014-06-06 06:31:42.821 FRIO 2014[27102:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
+2014-06-06 06:31:42.985 FRIO 2014[27102:80b] THREAD WARNING: ['Notification'] took '42.080078' ms. Plugin should use a background thread.

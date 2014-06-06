@@ -15,7 +15,7 @@
 </div>
 
 <ion-list>
-<ion-item ng-repeat="client in clients | filter:queryClient"  href="#/clients/{{$index}}" type="item-text-wrap">
+<ion-item ng-repeat="client in clients | orderBy:cli_des | filter:queryClient" href="#/clients/{{clients.indexOf(client)}}" type="item-text-wrap">
 {{client.cli_des | uppercase}}
 </ion-item>
 </ion-list>

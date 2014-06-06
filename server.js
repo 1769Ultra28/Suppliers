@@ -12,7 +12,7 @@ var config = {
 	user: "BestDeveloper",
 	password: "BeTheBest159+",
 	server: 'cssc.mine.nu\\CSSQL',
-	database: 'A_COMPRESS'
+	database: 'PRUEBAS'
 };
 
 app.get('/',	function(req, res) {
@@ -22,20 +22,19 @@ app.get('/',	function(req, res) {
 });
 
 var connection = new sql.Connection(config, function(err) {
-	$nowFormated = moment().format("YY-MM-DD HH:mm");
-
-
+	
 	app.get('/Suppliers', function(req, res){
-
+		$nowFormated = moment().format("YY-MM-DD HH:mm:ss");
 		res.header("Content-Type: application/json");
 		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Suppliers!");
     var request = new sql.Request(connection); // or: var request = connection.request();
     request.query("SELECT p.co_prov, p.prov_des, p.rif, p.co_zon, p.ciudad, p.zip, p.telefonos, p.fax, p.respons, p.email, p.website, p.direc1, p.direc2, z.zon_des FROM saProveedor p JOIN saZona z on (z.co_zon = p.co_zon)", function(err, recordset) {        
     	res.send(recordset);
     });
-});
+}); 
 
 	app.get('/Arts', function respond(req, res){
+		$nowFormated = moment().format("YY-MM-DD HH:mm:ss");
 		res.header("Content-Type: application/json");
 		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying 200 Arts!");
     var request = new sql.Request(connection); // or: var request = connection.request();
@@ -45,6 +44,7 @@ var connection = new sql.Connection(config, function(err) {
 });
 
 	app.get('/Zones', function respond(req, res){
+		$nowFormated = moment().format("YY-MM-DD HH:mm:ss");
 		res.header("Content-Type: application/json");
 		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Zones!");
     var request = new sql.Request(connection); // or: var request = connection.request();
@@ -54,6 +54,7 @@ var connection = new sql.Connection(config, function(err) {
 });
 
 	app.get('/Sellers', function respond(req, res){
+		$nowFormated = moment().format("YY-MM-DD HH:mm:ss");
 		res.header("Content-Type: application/json");
 		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Sellers");
 		var request = new sql.Request(connection);
@@ -63,6 +64,7 @@ var connection = new sql.Connection(config, function(err) {
 	});
 
 	app.get('/Clients', function respond(req, res){
+		$nowFormated = moment().format("YY-MM-DD HH:mm:ss");
 		res.header("Content-Type: application/json");
 		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Clients!");
     var request = new sql.Request(connection); // or: var request = connection.request();
@@ -72,6 +74,7 @@ var connection = new sql.Connection(config, function(err) {
 });
 
 	app.get('/ArtImagen', function respond(req, res){
+		$nowFormated = moment().format("YY-MM-DD HH:mm:ss");
 		res.header("Content-Type: application/json");
 		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Images!");
     var request = new sql.Request(connection); // or: var request = connection.request();

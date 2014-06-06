@@ -94,17 +94,17 @@ var app = {
 //     ['Restart','Exit']     // buttonLabels
 //     );
 
-function onPrompt(results) {
-    alert("Selec." + results.buttonIndex + "... Bienvenido: " + results.input1);
-}
+// function onPrompt(results) {
+//     alert("Selec." + results.buttonIndex + "... Bienvenido: " + results.input1);
+// }
 
-navigator.notification.prompt(
-    'Ingrese su nombre',  // message
-    onPrompt,                  // callback to invoke
-    'Inicio de session',            // title
-    ['Ingresar','Tomar valores por defecto'],             // buttonLabels
-    'Roy Calderon'                 // defaultText
-    );
+// navigator.notification.prompt(
+//     'Ingrese su nombre',  // message
+//     onPrompt,                  // callback to invoke
+//     'Inicio de session',            // title
+//     ['Ingresar','Tomar valores por defecto'],             // buttonLabels
+//     'Roy Calderon'                 // defaultText
+//     );
 
 // Beep 3!
 navigator.notification.beep(1);

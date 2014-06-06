@@ -18,7 +18,7 @@ angular.module('supplientsApp.services', [])
   }
 })
 
-.factory('Zones', function(){
+ .factory('Zones', function(){
   var zones=$.getJSON("http://cssc.mine.nu:15001/Zones", function(jsonObject){
     zones = jsonObject;
   });
@@ -33,7 +33,7 @@ angular.module('supplientsApp.services', [])
 })
 
 
-.factory('ArtImagen', function(){
+ .factory('ArtImagen', function(){
   var artImagen = $.getJSON("http://cssc.mine.nu:15001/ArtImagen", function(json){
     artImagen = json;
   });
@@ -44,7 +44,7 @@ angular.module('supplientsApp.services', [])
   }
 })
 
-.factory('Suppliers', function() {
+ .factory('Suppliers', function() {
   // Might use a resource here that returns a JSON array
   var suppliers;
   $.getJSON( "http://cssc.mine.nu:15001/Suppliers", function( json ) {
@@ -63,13 +63,15 @@ angular.module('supplientsApp.services', [])
 })
 
 
-.factory('Arts',function(){
-
-  var arts;
-  $.getJSON( "http://cssc.mine.nu:15001/Arts", function( json ) {
-    arts = (json);
+ .factory('Arts',function($http){
+var arts;
+  $http.get('http://cssc.mine.nu:15001/Arts').success(function(jsonArts){ 
+    arts = (jsonArts);
   });
-
+  // var arts;
+  // $.getJSON( "http://cssc.mine.nu:15001/Arts", function( json ) {
+  //   arts = (json);
+  // });
   return {
     all: function() {
       return arts;
@@ -80,18 +82,59 @@ angular.module('supplientsApp.services', [])
   }
 })
 
-.factory('Clients', function() {
+ .service('clientsService', function($http, $q, $timeout) {
+  // alert('clientService');
   var clients;
-  $.getJSON( "http://cssc.mine.nu:15001/Clients", function( json ) {
-    clients = (json);
-  });
-  return {
-    all: function() {
-      return clients;
-    },
-    get: function(clientId) {
-      // Simple index lookup
+      $http.get('http://cssc.mine.nu:15001/Clients').success(function(jsonClients){ 
+        clients = (jsonClients);
+      });
+    return {
+      all: function() {
+        return clients;
+      },
+      get: function(clientId) {
+      return clients[clientId];
+    }
+  }
+})
+
+ .factory('Clients', function($http) {
+  var clients;
+      $http.get('http://cssc.mine.nu:15001/Clients').success(function(jsonClients){ 
+        clients = (jsonClients);
+      });
+    return {
+      all: function() {
+        return clients;
+      },
+      get: function(clientId) {
       return clients[clientId];
     }
   }
 });
+
+// .factory('Clients', function($q, $timeout) {
+//   alert('Into Factory Clients');
+//   var deferred = $q.defer();
+//   var clients;
+
+//   $timeout(function() {
+
+//         // Simulated slow fetch from an HTTP server
+//         $.getJSON( "http://cssc.mine.nu:15001/Clients", function( json ) {
+//           clients = (json);
+//         });
+//         return {
+//           all: function() {
+//             return deferred.resolve(clients);
+//           },
+//           get: function(clientId) {
+//       // Simple index lookup
+//       return deferred.resolve(clients[clientId]);
+//     }
+//   }
+
+
+// }, 3000);
+//   return deferred.promise;
+// });

@@ -14,7 +14,7 @@
 </div>
 
 <ion-list>
-<ion-item ng-repeat="art in arts | filter:queryArts"  href="#/arts/{{$index}}" type="item-text-wrap">
+<ion-item ng-repeat="art in arts | filter: queryArts"  href="#/arts/{{arts.indexOf(art)}}" type="item-text-wrap">
 {{art.co_art}} - {{art.art_des | uppercase}}
 </ion-item>
 </ion-list>

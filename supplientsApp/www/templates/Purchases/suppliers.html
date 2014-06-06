@@ -14,7 +14,7 @@
 </div>
 
 <ion-list>
-<ion-item ng-repeat="supplier in suppliers | filter:query"  href="#/suppliers/{{$index}}" type="item-text-wrap">
+<ion-item ng-repeat="supplier in suppliers | filter:query"  href="#/suppliers/{{suppliers.indexOf(supplier)}}" type="item-text-wrap">
 {{supplier.prov_des | uppercase}}
 </ion-item>
 </ion-list>

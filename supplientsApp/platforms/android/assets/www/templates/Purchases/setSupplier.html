@@ -7,11 +7,11 @@
 <div class="list">
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Nombree de Empresa</span>
-		<input ng-model="supplier.prov_des" type="text" placeholder="EJM: Compresores Servicios">
+		<input style="text-transform:uppercase ;" ng-model="supplier.prov_des" type="text" placeholder="EJM: Compresores Servicios">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">R.I.F.</span>
-		<input ng-model="supplier.rif" type="text" placeholder="EJM: J090288210">
+		<input style="text-transform:uppercase ;" ng-model="supplier.rif" type="text" placeholder="EJM: J090288210">
 	</label>
 
 	<label class="item item-input item-select">
@@ -23,39 +23,39 @@
 
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Ciudad</span>
-		<input ng-model="supplier.ciudad" type="text" placeholder="EJM: San Cristobal">
+		<input style="text-transform:uppercase ;" ng-model="supplier.ciudad" type="text" placeholder="EJM: San Cristobal">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Codigo Postal</span>
-		<input ng-model="supplier.zip" type="text" placeholder="EJM: 5001">
+		<input style="text-transform:uppercase ;" ng-model="supplier.zip" type="text" placeholder="EJM: 5001">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Telefonos</span>
-		<input ng-model="supplier.telefonos" type="text" placeholder="EJM: 0276-3416373 / 0414-7229901">
+		<input style="text-transform:uppercase ;" ng-model="supplier.telefonos" type="text" placeholder="EJM: 0276-3416373 / 0414-7229901">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">FAX</span>
-		<input ng-model="supplier.fax" type="text" placeholder="EJM: 0276-3416373">
+		<input style="text-transform:uppercase ;" ng-model="supplier.fax" type="text" placeholder="EJM: 0276-3416373">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Contacto</span>
-		<input ng-model="supplier.respons" type="text" placeholder="Alba De Sillie">
+		<input style="text-transform:uppercase ;" ng-model="supplier.respons" type="text" placeholder="Alba De Sillie">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Email</span>
-		<input ng-model="supplier.email" type="text" placeholder="coservica@gmail.com">
+		<input style="text-transform:uppercase ;" ng-model="supplier.email" type="text" placeholder="coservica@gmail.com">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Pagina Web</span>
-		<input ng-model="supplier.website" type="text" placeholder="www.compresoresservicios.com">
+		<input style="text-transform:uppercase ;" ng-model="supplier.website" type="text" placeholder="www.compresoresservicios.com">
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Dirección</span>
-		<textarea ng-model="supplier.direc1" placeholder="Calle 10 entre carreras 13 y 15 - Frente al Cuartel Bolívar."></textarea>
+		<textarea style="text-transform:uppercase ;" ng-model="supplier.direc1" placeholder="Calle 10 entre carreras 13 y 15 - Frente al Cuartel Bolívar."></textarea>
 	</label>
 	<label class="item item-input item-stacked-label">
 		<span class="input-label">Direccion alterna:</span>
-		<textarea ng-model="supplier.direc2" placeholder="Sucursal. Calle 9 frente a la bomba 'El Diamante de Táriba'"></textarea>
+		<textarea style="text-transform:uppercase ;" ng-model="supplier.direc2" placeholder="Sucursal. Calle 9 frente a la bomba 'El Diamante de Táriba'"></textarea>
 	</label>
 
 	<button class="button button-block button-assertive ion-trash-a" ng-click="reset()">
@@ -66,14 +66,11 @@
 		Enviar Correo de Presentación a: {{supplier.email}}
 	</button>
 
-
 	<button class="button button-block button-assertive ion-person-add" ng-click="processForm()">
 		Guardar Proveedor	
 	</button>
 
 </div>
-
-
 
 </ion-content>
 </ion-view>

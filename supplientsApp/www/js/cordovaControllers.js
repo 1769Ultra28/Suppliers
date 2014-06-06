@@ -48,7 +48,7 @@ var app = {
         states[Connection.CELL_4G]  = 'Cell 4G connection';
         states[Connection.CELL]     = 'Cell generic connection';
         states[Connection.NONE]     = 'No network connection';
-        alert('-> Connection type: ' + states[networkState]);
+        //alert('-> Connection type: ' + states[networkState]);
         //console.log(device.cordova);
         // alert('cordova v: '+ device.cordova);
         // alert('model: '+ device.model);
@@ -95,7 +95,7 @@ var app = {
 //     );
 
 function onPrompt(results) {
-    alert("Has seleccionado " + results.buttonIndex + "... Bienvenido: " + results.input1);
+    alert("Selec." + results.buttonIndex + "... Bienvenido: " + results.input1);
 }
 
 navigator.notification.prompt(
@@ -107,7 +107,7 @@ navigator.notification.prompt(
     );
 
 // Beep 3!
-navigator.notification.beep(2);
+navigator.notification.beep(1);
 
 
 },

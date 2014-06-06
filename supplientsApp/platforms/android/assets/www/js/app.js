@@ -6,7 +6,7 @@
 // 'supplientsApp.controllers' is found in controllers.js
 
 //Agregar: , 'supplientsApp.services'
-angular.module('supplientsApp', ['ionic', 'supplientsApp.globalControllers', 'supplientsApp.salesControllers', 'supplientsApp.inventoryControllers', 'supplientsApp.services'])
+angular.module('supplientsApp', ['ionic', 'supplientsApp.globalControllers', 'supplientsApp.salesControllers', 'supplientsApp.purchasesControllers', 'supplientsApp.inventoryControllers', 'supplientsApp.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -83,6 +83,25 @@ angular.module('supplientsApp', ['ionic', 'supplientsApp.globalControllers', 'su
     url: "/clients/:clientId",
     templateUrl: "templates/Sales/client.html",
     controller: 'ClientDetailCtrl'
+  })
+
+  .state('suppliers', {
+    url: "/suppliers",
+    templateUrl: "templates/Purchases/suppliers.html",
+    controller: 'SuppliersCtrl'
+  })
+
+
+  .state('setSupplier', {
+    url: "/setSupplier",
+    templateUrl: "templates/Purchases/setSupplier.html",
+    controller: 'setSupplierCtrl'
+  })
+  
+  .state('supplier-detail', {
+    url: "/suppliers/:supplierId",
+    templateUrl: "templates/Purchases/supplier.html",
+    controller: 'SupplierDetailCtrl'
   })
 
 

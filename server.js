@@ -8,12 +8,11 @@ var app = express()
 .use(express.static('public'));
 
 var sql = require('mssql'); 
-
 var config = {
 	user: "BestDeveloper",
 	password: "BeTheBest159+",
 	server: 'cssc.mine.nu\\CSSQL',
-	database: 'PRUEBAS'
+	database: 'A_COMPRESS'
 };
 
 app.get('/',	function(req, res) {
@@ -23,11 +22,13 @@ app.get('/',	function(req, res) {
 });
 
 var connection = new sql.Connection(config, function(err) {
+	$nowFormated = moment().format("YY-MM-DD HH:mm");
+
 
 	app.get('/Suppliers', function(req, res){
 
 		res.header("Content-Type: application/json");
-		console.log("Querying Suppliers!");
+		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Suppliers!");
     var request = new sql.Request(connection); // or: var request = connection.request();
     request.query("SELECT p.co_prov, p.prov_des, p.rif, p.co_zon, p.ciudad, p.zip, p.telefonos, p.fax, p.respons, p.email, p.website, p.direc1, p.direc2, z.zon_des FROM saProveedor p JOIN saZona z on (z.co_zon = p.co_zon)", function(err, recordset) {        
     	res.send(recordset);
@@ -36,7 +37,7 @@ var connection = new sql.Connection(config, function(err) {
 
 	app.get('/Arts', function respond(req, res){
 		res.header("Content-Type: application/json");
-		console.log("Querying 200 Arts!");
+		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying 200 Arts!");
     var request = new sql.Request(connection); // or: var request = connection.request();
     request.query("SELECT TOP 200 a.co_art,  a.art_des, a.co_subl, a.co_lin, a.co_cat, c.cat_des, s.subl_des, l.lin_des FROM saArticulo a JOIN saLineaArticulo l  on (l.co_lin = a.co_lin) JOIN saSubLinea s       on (s.co_subl = a.co_subl) JOIN saCatArticulo c    on (c.co_cat = a.co_cat )", function(err, recordset) {        
     	res.send(recordset);
@@ -45,7 +46,7 @@ var connection = new sql.Connection(config, function(err) {
 
 	app.get('/Zones', function respond(req, res){
 		res.header("Content-Type: application/json");
-		console.log("Querying Zones!");
+		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Zones!");
     var request = new sql.Request(connection); // or: var request = connection.request();
     request.query("SELECT co_zon, zon_des FROM saZona", function(err, recordset) {        
     	res.send(recordset);
@@ -54,7 +55,7 @@ var connection = new sql.Connection(config, function(err) {
 
 	app.get('/Sellers', function respond(req, res){
 		res.header("Content-Type: application/json");
-		console.log("Querying Sellers");
+		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Sellers");
 		var request = new sql.Request(connection);
 		request.query("SELECT co_ven, ven_des FROM saVendedor", function(err, recordset){
 			res.send(recordset);
@@ -63,7 +64,7 @@ var connection = new sql.Connection(config, function(err) {
 
 	app.get('/Clients', function respond(req, res){
 		res.header("Content-Type: application/json");
-		console.log("Querying Clients!");
+		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Clients!");
     var request = new sql.Request(connection); // or: var request = connection.request();
     request.query("SELECT c.co_cli, c.cli_des, c.rif, c.co_zon, c.ciudad, c.zip, c.co_ven, c.telefonos, c.fax, c.respons, c.email, c.website, c.direc1, c.direc2, c.co_seg, z.zon_des, v.ven_des, s.seg_des FROM saCliente c JOIN saZona z on (z.co_zon = c.co_zon) JOIN saVendedor v on (c.co_ven = v.co_ven) JOIN saSegmento s on (s.co_seg = c.co_seg)", function(err, recordset) {        
     	res.send(recordset);
@@ -72,7 +73,7 @@ var connection = new sql.Connection(config, function(err) {
 
 	app.get('/ArtImagen', function respond(req, res){
 		res.header("Content-Type: application/json");
-		console.log("Querying Images!");
+		console.log($nowFormated+' - '+req.connection.remoteAddress+"-> Querying Images!");
     var request = new sql.Request(connection); // or: var request = connection.request();
     request.query("SELECT TOP 1 co_art, picture FROM saArtImagen", function(err, recordset) {        
     	res.send(recordset);
@@ -86,6 +87,7 @@ app.post('/setClient', function(request, response){
 
   var client = request.body;
   $nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
+  console.log(request.connection.remoteAddress+"-> Trying Insert Client: "+ client.cli_des +", at "+ $nowFormated);
 
   var connection = new sql.Connection(config, function(err) {
   	var transaction = connection.transaction();
@@ -145,6 +147,7 @@ app.post('/setSupplier', function(request, response){
 
   var supplier = request.body;
   $nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
+  console.log(request.connection.remoteAddress+"-> Trying Insert Supplier: "+ supplier.prov_des +", at "+ $nowFormated);
 
   var connection = new sql.Connection(config, function(err) {
   	var transaction = connection.transaction();
@@ -188,7 +191,6 @@ app.post('/setSupplier', function(request, response){
 			    					console.log('Registro guardado con éxito');
 			    					response.json(200, {status: 'Client inserted successfully :D'});
 			    				}   	
-
 			    			});
 			    		}
 			    	});

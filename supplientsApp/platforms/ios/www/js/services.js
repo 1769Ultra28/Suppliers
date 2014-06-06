@@ -34,7 +34,7 @@ angular.module('supplientsApp.services', [])
 
 
 .factory('ArtImagen', function(){
-  var artImagen = $getJSON("http://cssc.mine.nu:15001/ArtImagen", function(json){
+  var artImagen = $.getJSON("http://cssc.mine.nu:15001/ArtImagen", function(json){
     artImagen = json;
   });
   return {
@@ -85,7 +85,6 @@ angular.module('supplientsApp.services', [])
   $.getJSON( "http://cssc.mine.nu:15001/Clients", function( json ) {
     clients = (json);
   });
-
   return {
     all: function() {
       return clients;

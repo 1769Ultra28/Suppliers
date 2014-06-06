@@ -16,13 +16,13 @@
     <feature name="EmailComposer">
         <param name="android-package" value="de.appplant.cordova.plugin.emailcomposer.EmailComposer" />
     </feature>
-    <name>HelloCordova</name>
+    <name>FRIO 2014</name>
     <description>
-        An Ionic Framework and Cordova project.
+        Roy Calderon
     </description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
+    <author email="royedc4@gmail.com" href="www.roycalderon.com">
+      Roy2014
+  </author>
     <content src="index.html" />
     <access origin="*" />
     <preference name="fullscreen" value="true" />

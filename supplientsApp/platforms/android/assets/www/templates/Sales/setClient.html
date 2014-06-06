@@ -7,7 +7,7 @@
 	<div class="list">
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Nombre de Empresa</span>
-			<input ng-model="client.cli_des" type="text" placeholder="EJM: Compresores Servicios">
+			<input style="text-transform:uppercase ;" ng-model="client.cli_des" type="text" placeholder="EJM: Compresores Servicios">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">R.I.F.</span>
@@ -31,54 +31,52 @@
 
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Ciudad</span>
-			<input ng-model="client.ciudad" type="text" placeholder="EJM: San Cristobal">
+			<input style="text-transform:uppercase ;" ng-model="client.ciudad" type="text" placeholder="EJM: San Cristobal">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Codigo Postal</span>
-			<input ng-model="client.zip" type="text" placeholder="EJM: 5001">
+			<input style="text-transform:uppercase ;" ng-model="client.zip" type="text" placeholder="EJM: 5001">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Telefonos</span>
-			<input ng-model="client.telefonos" type="tel" placeholder="EJM: 0276-3416373 / 0414-7229901">
+			<input style="text-transform:uppercase ;" ng-model="client.telefonos" type="tel" placeholder="EJM: 0276-3416373 / 0414-7229901">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">FAX</span>
-			<input ng-model="client.fax" type="tel" placeholder="EJM: 0276-3416373">
+			<input style="text-transform:uppercase ;" ng-model="client.fax" type="tel" placeholder="EJM: 0276-3416373">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Contacto</span>
-			<input ng-model="client.respons"type="text" placeholder="Alba De Sillie">
+			<input style="text-transform:uppercase ;" ng-model="client.respons"type="text" placeholder="Alba De Sillie">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Email</span>
-			<input ng-model="client.email" type="email" placeholder="coservica@gmail.com">
+			<input style="text-transform:uppercase ;" ng-model="client.email" type="email" placeholder="coservica@gmail.com">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Pagina Web</span>
-			<input ng-model="client.website" type="text" placeholder="www.compresoresservicios.com">
+			<input style="text-transform:uppercase ;" ng-model="client.website" type="text" placeholder="www.compresoresservicios.com">
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Dirección</span>
-			<textarea ng-model="client.direc1" placeholder="Calle 10 entre carreras 13 y 15 - Frente al Cuartel Bolívar."></textarea>
+			<textarea style="text-transform:uppercase ;" ng-model="client.direc1" placeholder="Calle 10 entre carreras 13 y 15 - Frente al Cuartel Bolívar."></textarea>
 		</label>
 		<label class="item item-input item-stacked-label">
 			<span class="input-label">Direccion alterna:</span>
-			<textarea ng-model="client.direc2" placeholder="Sucursal. Calle 9 frente a la bomba 'El Diamante de Táriba'"></textarea>
+			<textarea style="text-transform:uppercase ;" ng-model="client.direc2" placeholder="Sucursal. Calle 9 frente a la bomba 'El Diamante de Táriba'"></textarea>
 		</label>
 
 			<button class="button button-block button-assertive ion-trash-a" ng-click="reset()">
-				Limpiar formulario de: {{client.cli_des}}
+				Limpiar formulario de: {{client.cli_des | uppercase}}
 			</button>
 
 			<button class="button button-block button-assertive ion-email" ng-click="showSendEmailConfirm()">
-				Enviar Correo de Presentación a: {{client.email}}
+				1. Enviar Correo de Presentación a: {{client.email}}
 			</button>
-
 
 			<button class="button button-block button-assertive ion-person-add" ng-click="processForm()">
-				Guardar Cliente	
+				2. Guardar Cliente	
 			</button>
-
 
 		<!-- <pre>client json = {{client | json}}</pre>
 		<pre>client w/json = {{client}}</pre> -->

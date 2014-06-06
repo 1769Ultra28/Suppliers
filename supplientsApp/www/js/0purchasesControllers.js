@@ -33,6 +33,8 @@ angular.module('supplientsApp.purchasesControllers', [])
 	$scope.zones = Zones.all();
 	$scope.sellers = Sellers.all();
 
+	console.log('\nsetSupplier :D\n');
+
 	$scope.zoneSelected=$scope.zones[10];
 	$scope.sellerSelected=$scope.sellers[1];
 

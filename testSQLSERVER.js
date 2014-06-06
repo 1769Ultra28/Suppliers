@@ -14,7 +14,7 @@ var config = {
 	user: "BestDeveloper",
 	password: "BeTheBest159+",
 	server: 'cssc.mine.nu\\CSSQL',
-	database: 'PRUEBAS'
+	database: 'A_COMPRESS'
 };
 
 var connection = new sql.Connection(config, function(err) {

@@ -122,7 +122,6 @@
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/network.js \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Info \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Inventory \
-/Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/menu.html \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Purchases \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Sales \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Info/aboutCompany-tabs.html \
@@ -131,6 +130,9 @@
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Info/mission.html \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Inventory/art.html \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Inventory/arts.html \
+/Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Purchases/setSupplier.html \
+/Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Purchases/supplier.html \
+/Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Purchases/suppliers.html \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Sales/client.html \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Sales/clients.html \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/assets/www/templates/Sales/setClient.html \

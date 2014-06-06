@@ -2,12 +2,25 @@ angular.module('supplientsApp.salesControllers', [])
 
 .controller('ClientsCtrl', function($scope, Clients) {
 	$scope.clients = Clients.all();
+	// var clients;
+	// $scope.getClientsData = function(){
+	// 	$.getJSON( "http://cssc.mine.nu:15001/Clients", function( json ) {
+	// 		clients= (json);
+	// 	});
+	// };
+	// $scope.getClientsData();
+	// $scope.clients = clients;
+	// setInterval(
+	// 	function(){
+	// 		//$scope.reloadPage = function(){window.location.reload();}
+	// 		$route.reload();
+	// 	},2000);
 })
 
 .controller('ClientDetailCtrl', function($scope, $stateParams, Clients, $timeout, $q, $ionicPopup) {
 	$scope.client = Clients.get($stateParams.clientId); 
 
-	//Envio del correo
+	//Envio del corre\
 	$scope.showSendEmailConfirm = function() {
 		$ionicPopup.confirm({
 			title: 'Confirmación Correo',
@@ -38,7 +51,7 @@ angular.module('supplientsApp.salesControllers', [])
 
 	$scope.zoneSelected=$scope.zones[10];
 	$scope.sellerSelected=$scope.sellers[1];
-
+	alert('set  Clients ctrl');
 	$scope.client = {};
 
 	$scope.reset = function() {

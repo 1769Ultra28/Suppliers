@@ -688,3 +688,31 @@ objc[27102]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.a
 2014-06-06 06:31:42.787 FRIO 2014[27102:80b] THREAD WARNING: ['NetworkStatus'] took '4203.802246' ms. Plugin should use a background thread.
 2014-06-06 06:31:42.821 FRIO 2014[27102:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
 2014-06-06 06:31:42.985 FRIO 2014[27102:80b] THREAD WARNING: ['Notification'] took '42.080078' ms. Plugin should use a background thread.
+objc[28104]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-06 07:19:59.612 FRIO 2014[28104:80b] Cannot find executable for CFBundle 0xbe8dbb0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-06 07:19:59.638 FRIO 2014[28104:80b] Cannot find executable for CFBundle 0xc1a3b80 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-06 07:19:59.642 FRIO 2014[28104:80b] Cannot find executable for CFBundle 0xc1adca0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-06 07:19:59.968 FRIO 2014[28104:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 07:20:00.239 FRIO 2014[28104:80b] Unlimited access to network resources
+2014-06-06 07:20:02.872 FRIO 2014[28104:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-06 07:20:02.873 FRIO 2014[28104:80b] [CDVTimer][statusbar] 0.487983ms
+2014-06-06 07:20:02.873 FRIO 2014[28104:80b] [CDVTimer][TotalPluginStartup] 0.896037ms
+2014-06-06 07:20:03.663 FRIO 2014[28104:80b] Resetting plugins due to page load.
+2014-06-06 07:20:05.946 FRIO 2014[28104:80b] THREAD WARNING: ['Device'] took '17.867676' ms. Plugin should use a background thread.
+2014-06-06 07:20:26.517 FRIO 2014[28104:80b] THREAD WARNING: ['NetworkStatus'] took '20553.946045' ms. Plugin should use a background thread.
+2014-06-06 07:20:26.628 FRIO 2014[28104:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
+objc[28397]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-06 07:22:45.926 FRIO 2014[28397:80b] Cannot find executable for CFBundle 0xcd5c670 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-06 07:22:45.963 FRIO 2014[28397:80b] Cannot find executable for CFBundle 0xbe4ec20 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-06 07:22:45.965 FRIO 2014[28397:80b] Cannot find executable for CFBundle 0xbe4ffb0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-06 07:22:46.036 FRIO 2014[28397:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-06 07:22:46.054 FRIO 2014[28397:80b] Unlimited access to network resources
+2014-06-06 07:22:46.208 FRIO 2014[28397:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-06 07:22:46.208 FRIO 2014[28397:80b] [CDVTimer][statusbar] 0.411034ms
+2014-06-06 07:22:46.209 FRIO 2014[28397:80b] [CDVTimer][TotalPluginStartup] 0.767052ms
+2014-06-06 07:22:46.290 FRIO 2014[28397:80b] Resetting plugins due to page load.
+2014-06-06 07:22:53.375 FRIO 2014[28397:80b] THREAD WARNING: ['NetworkStatus'] took '6572.995850' ms. Plugin should use a background thread.
+2014-06-06 07:22:53.397 FRIO 2014[28397:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/8AA90F3B-52B1-4ED2-A5C1-E746D0FF8E84/FRIO%202014.app/www/index.html#/aboutCompany/company
+2014-06-06 07:22:53.426 FRIO 2014[28397:80b] THREAD WARNING: ['Notification'] took '15.965088' ms. Plugin should use a background thread.
+2014-06-06 07:24:27.695 FRIO 2014[28397:80b] BIEN PELAO>>>> USTED.... BIEN xD
+2014-06-06 07:24:32.802 FRIO 2014[28397:80b] Mostrando Alerta de confirmacion ;)

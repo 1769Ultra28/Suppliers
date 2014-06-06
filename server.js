@@ -12,14 +12,8 @@ var config = {
 	user: "BestDeveloper",
 	password: "BeTheBest159+",
 	server: 'cssc.mine.nu\\CSSQL',
-	database: 'PRUEBAS'
+	database: 'A_COMPRESS'
 };
-
-app.get('/',	function(req, res) {
-
-	res.sendFile('.public/index.html');
-
-});
 
 var connection = new sql.Connection(config, function(err) {
 	
@@ -119,7 +113,6 @@ app.post('/setClient', function(request, response){
 				reqInsert.query($consultSql, function(err, recordset) {
 					if(err){
 						console.log('Error requesting Insert');
-			    			//response.json(err);
 			    			transaction.rollback(function(err) {
 			    				console.log('Error in insert... rollback!!!!');
 			    			});	
@@ -128,13 +121,11 @@ app.post('/setClient', function(request, response){
 			    			transaction.commit(function(err, recordset) {
 			    				if(err){
 			    					console.log('Error commiting insert');
-			    					//response.json(err);
 			    				}
 			    				else{
 			    					console.log('Registro guardado con éxito');
 			    					response.json(200, {status: 'Client inserted successfully :D'});
 			    				}   	
-
 			    			});
 			    		}
 			    	});
@@ -179,7 +170,6 @@ app.post('/setSupplier', function(request, response){
 				reqInsert.query($consultSql, function(err, recordset) {
 					if(err){
 						console.log('Error requesting Insert');
-			    			//response.json(err);
 			    			transaction.rollback(function(err) {
 			    				console.log('Error in insert... rollback!!!!');
 			    			});	
@@ -188,7 +178,6 @@ app.post('/setSupplier', function(request, response){
 			    			transaction.commit(function(err, recordset) {
 			    				if(err){
 			    					console.log('Error commiting insert');
-			    					//response.json(err);
 			    				}
 			    				else{
 			    					console.log('Registro guardado con éxito');
@@ -210,6 +199,11 @@ app.post('/setSupplier', function(request, response){
 
 
 //Chuchu
+app.get('/',	function(req, res) {
+	res.sendFile('.public/index.html');
+});
+
+
 app.get('/loadData', function(req, res){
 
 	$consultSql = "SELECT TOP 10 prov_des, rif, co_zon, ciudad, zip, telefonos, fax, respons, email, website, direc1, direc2 FROM saProveedor order by co_prov DESC";

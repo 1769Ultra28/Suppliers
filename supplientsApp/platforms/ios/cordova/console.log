@@ -1,0 +1,26 @@
+objc[2557]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-07 15:45:19.900 FRIO2014[2557:80b] Cannot find executable for CFBundle 0xc1b2e70 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-07 15:45:19.929 FRIO2014[2557:80b] Cannot find executable for CFBundle 0xbc7e3e0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-07 15:45:19.944 FRIO2014[2557:80b] Cannot find executable for CFBundle 0xbf83010 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-07 15:45:20.039 FRIO2014[2557:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-07 15:45:20.064 FRIO2014[2557:80b] Unlimited access to network resources
+2014-06-07 15:45:20.173 FRIO2014[2557:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-07 15:45:20.173 FRIO2014[2557:80b] [CDVTimer][statusbar] 0.515997ms
+2014-06-07 15:45:20.174 FRIO2014[2557:80b] [CDVTimer][TotalPluginStartup] 0.995040ms
+2014-06-07 15:45:20.335 FRIO2014[2557:80b] Resetting plugins due to page load.
+Terminating in response to SpringBoard's termination.
+objc[2988]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2014-06-07 15:49:18.668 FRIO2014[2988:80b] Cannot find executable for CFBundle 0xbd616d0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/MusicLibrary.axbundle> (not loaded)
+2014-06-07 15:49:18.675 FRIO2014[2988:80b] Cannot find executable for CFBundle 0xbd649d0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2014-06-07 15:49:18.743 FRIO2014[2988:80b] Cannot find executable for CFBundle 0xbb670d0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2014-06-07 15:49:18.798 FRIO2014[2988:80b] Multi-tasking -> Device: YES, App: YES
+2014-06-07 15:49:18.808 FRIO2014[2988:80b] Unlimited access to network resources
+2014-06-07 15:49:18.831 FRIO2014[2988:80b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-06-07 15:49:18.832 FRIO2014[2988:80b] [CDVTimer][statusbar] 0.582993ms
+2014-06-07 15:49:18.833 FRIO2014[2988:80b] [CDVTimer][TotalPluginStartup] 1.323998ms
+2014-06-07 15:49:18.948 FRIO2014[2988:80b] Resetting plugins due to page load.
+2014-06-07 15:49:34.992 FRIO2014[2988:80b] THREAD WARNING: ['NetworkStatus'] took '15663.436035' ms. Plugin should use a background thread.
+2014-06-07 15:49:34.994 FRIO2014[2988:400b] void SendDelegateMessage(NSInvocation *): delegate (webView:decidePolicyForNavigationAction:request:frame:decisionListener:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-06-07 15:49:35.012 FRIO2014[2988:80b] Finished load of: file:///Users/roy/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/58CEAAE5-BACD-4F12-97E7-B1C7F47FD717/FRIO2014.app/www/index.html#/aboutCompany/company
+2014-06-07 15:50:06.898 FRIO2014[2988:80b] Felicitaciones :P (Mail Sended)
+2014-06-07 15:50:06.918 FRIO2014[2988:80b] THREAD WARNING: ['EmailComposer'] took '20.123779' ms. Plugin should use a background thread.

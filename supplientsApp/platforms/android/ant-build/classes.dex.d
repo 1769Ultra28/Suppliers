@@ -1,6 +1,6 @@
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/ant-build/classes.dex : \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/ant-build/classes/com/ionicframework/starter/BuildConfig.class \
-/Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/ant-build/classes/com/ionicframework/starter/HelloCordova.class \
+/Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/ant-build/classes/com/ionicframework/starter/FRIO2014.class \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/ant-build/classes/com/ionicframework/starter/R$attr.class \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/ant-build/classes/com/ionicframework/starter/R$drawable.class \
 /Users/roy/Clouds/Dropbox/Dev/PROFIT/1769Ultra28/supplientsApp/platforms/android/ant-build/classes/com/ionicframework/starter/R$string.class \

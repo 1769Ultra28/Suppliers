@@ -4,6 +4,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="EmailComposer">
+        <param name="android-package" value="de.appplant.cordova.plugin.emailcomposer.EmailComposer" />
+    </feature>
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
@@ -13,10 +16,7 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <feature name="EmailComposer">
-        <param name="android-package" value="de.appplant.cordova.plugin.emailcomposer.EmailComposer" />
-    </feature>
-    <name>FRIO 2014</name>
+    <name>FRIO2014</name>
     <description>
         Roy Calderon
     </description>

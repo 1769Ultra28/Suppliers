@@ -54,30 +54,41 @@ $scope.processForm = function() {
 	$http.defaults.headers.post["Content-Type"] = "application/json";
 		// console.log($scope.supplier); key sin comillas
 		// console.log(JSON.stringify($scope.supplier)); todo comillas
-
 		$http({
 			url: 'http://cssc.mine.nu:15001/setSupplier',
 			method: "POST",
 			data: JSON.stringify($scope.supplier)
-		})
-		.then(function(response) {
-			console.log('BIEN PELAO>>>> USTED.... BIEN xD');
-			$scope.showAlert = function() {
-				$ionicPopup.alert({
-					title: 'Informatica Compresores Servicios',
-					content: 'Guardado exitosamente! ^_^'
-				}).then(function(res) {
-					console.log('Mostrando Alerta ');
-				});
-			};
-			$scope.showAlert();
-		}, 
-    function(response) { // optional
-    	console.log('bien mal xD');
-    }
-    );		
-		$scope.reset();
+		}).
+		success(function(postResponse) {
+	      // this callback will be called asynchronously
+	      // when the response is available
+	      console.log(postResponse.statusText);
+	      console.log('BIEN PELAO>>>> USTED.... BIEN xD');
+	      $scope.showAlert = function() {
+	      	$ionicPopup.alert({
+	      		title: 'Informatica Compresores Servicios',
+	      		content: postResponse.statusText
+	      	}).then(function(res) {
+	      		console.log(postResponse.statusText);
+	      	});
+	      };
+	      $scope.showAlert();
+	      $scope.reset();
+	  }).
+		error(function(postResponse) {
+      // called asynchronously if an error occurs
+      // or server returns response with an error status.
+      console.log('bien mal xD\n');
+      $scope.showAlert = function() {
+      	$ionicPopup.alert({
+      		title: 'Informatica Compresores Servicios',
+      		content: postResponse.statusText
+      	}).then(function(res) {
+      		console.log(postResponse.statusText);
+      	});
+      };
+      $scope.showAlert();
+  });		
 	};
-
 })
 

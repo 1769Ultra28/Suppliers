@@ -80,16 +80,20 @@ var connection = new sql.Connection(config, function(err) {
 
 app.post('/setClient', function(request, response){
   //console.log(request.body);      // your JSON
-  response.send(request.body);    // echo the result back
-
+  //response.send(request.body);    // echo the result back
   var client = request.body;
-  $nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
-  console.log(request.connection.remoteAddress+"-> Trying Insert Client: "+ client.cli_des +", at "+ $nowFormated);
+  if (client.cli_des==undefined || client.zoneSelected==undefined || client.sellerSelected==undefined || client.rif==undefined){
+  	response.json(500, { statusText: 'Descripcion, RIF, Vendedor o Zona en Blanco...\n Verifique los datos'});
+  }
+  else
+  {
+  	$nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
+  	console.log($nowFormated+' - '+request.connection.remoteAddress+"-> Trying Insert Client:\ncli_des: "+ client.cli_des +",rif: "+ client.rif);
 
-  var connection = new sql.Connection(config, function(err) {
-  	var transaction = connection.transaction();
-  	transaction.begin(function(err) {
-  		var reqProcClient = new sql.Request(transaction);
+  	var connection = new sql.Connection(config, function(err) {
+  		var transaction = connection.transaction();
+  		transaction.begin(function(err) {
+  			var reqProcClient = new sql.Request(transaction);
 		//We could set this prefix anywhere in our app and bring it here... 
 		$prefix = 'FRIO';
 		// These 2 values depends of the table... 
@@ -113,40 +117,45 @@ app.post('/setClient', function(request, response){
 				reqInsert.query($consultSql, function(err, recordset) {
 					if(err){
 						console.log('Error requesting Insert');
-			    			transaction.rollback(function(err) {
-			    				console.log('Error in insert... rollback!!!!');
-			    			});	
-			    		}
-			    		else{
-			    			transaction.commit(function(err, recordset) {
-			    				if(err){
-			    					console.log('Error commiting insert');
-			    				}
-			    				else{
-			    					console.log('Registro guardado con éxito');
-			    					response.json(200, {status: 'Client inserted successfully :D'});
-			    				}   	
-			    			});
-			    		}
-			    	});
+						transaction.rollback(function(err) {
+							console.log('Error in insert... rollback!!!!');
+						});	
+					}
+					else{
+						transaction.commit(function(err, recordset) {
+							if(err){
+								console.log('Error commiting insert');
+							}
+							else{
+								console.log('Registro guardado con éxito');
+								response.json(200, {statusText: 'Cliente Guardado Exitosamente ^_^'});
+							}   	
+						});
+					}
+				});
 			}
 		});
 });
 });
+}//Else
 });
 
 app.post('/setSupplier', function(request, response){
   //console.log(request.body);      // your JSON
-  response.send(request.body);    // echo the result back
-
+  //response.send(request.body);    // echo the result back
   var supplier = request.body;
-  $nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
-  console.log(request.connection.remoteAddress+"-> Trying Insert Supplier: "+ supplier.prov_des +", at "+ $nowFormated);
+  if (supplier.prov_des==undefined || supplier.zoneSelected.co_zon==undefined || supplier.rif==undefined){
+  	response.json(500, { statusText: 'Descripcion, RIF o Zona en Blanco...\n Verifique los datos'});
+  }
+  else
+  {
+  	$nowFormated = moment().format("YYYY-MM-DD HH:mm:ss.SSS");
+  	console.log($nowFormated+' - '+request.connection.remoteAddress+"-> Trying Insert Supplier:\nprov_des: "+ supplier.prov_des +",rif: "+ supplier.rif);
 
-  var connection = new sql.Connection(config, function(err) {
-  	var transaction = connection.transaction();
-  	transaction.begin(function(err) {
-  		var reqProcClient = new sql.Request(transaction);
+  	var connection = new sql.Connection(config, function(err) {
+  		var transaction = connection.transaction();
+  		transaction.begin(function(err) {
+  			var reqProcClient = new sql.Request(transaction);
 		//We could set this prefix anywhere in our app and bring it here... 
 		$prefix = 'FRIO';
 		// These 2 values depends of the table... 
@@ -170,26 +179,27 @@ app.post('/setSupplier', function(request, response){
 				reqInsert.query($consultSql, function(err, recordset) {
 					if(err){
 						console.log('Error requesting Insert');
-			    			transaction.rollback(function(err) {
-			    				console.log('Error in insert... rollback!!!!');
-			    			});	
-			    		}
-			    		else{
-			    			transaction.commit(function(err, recordset) {
-			    				if(err){
-			    					console.log('Error commiting insert');
-			    				}
-			    				else{
-			    					console.log('Registro guardado con éxito');
-			    					response.json(200, {status: 'Client inserted successfully :D'});
-			    				}   	
-			    			});
-			    		}
-			    	});
+						transaction.rollback(function(err) {
+							console.log('Error in insert... rollback!!!!');
+						});		
+					}
+					else{
+						transaction.commit(function(err, recordset) {
+							if(err){
+								console.log('Error commiting insert');
+							}
+							else{
+								console.log('Registro guardado con éxito');
+								response.json(200, {statusText: 'Proveedor Guardado Exitosamente ^_^'});
+							}   	
+						});
+					}
+				});
 			}
 		});
 });
 });
+}//Else
 });
 
 
@@ -297,6 +307,6 @@ app.post('/saveUser', function(req, res){
 
 http.createServer(app).listen(15001, function () {
 
-	console.log("Servidor listo escuchando: http://localhost:15001");
+	console.log("Servidor listo escuchando: http://cssc.mine.nu:15001");
 
 });

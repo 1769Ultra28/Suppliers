@@ -62,32 +62,31 @@ $scope.processForm = function() {
 			method: "POST",
 			data: JSON.stringify($scope.client)
 		})
-		.then(function(response) {
+		.success(function(postResponse) {
+			console.log(postResponse.statusText);
 			console.log('BIEN PELAO>>>> USTED.... BIEN xD');
 			$scope.showAlert = function() {
 				$ionicPopup.alert({
 					title: 'Informatica Compresores Servicios',
-					content: 'Guardado exitosamente! ^_^'
+					content: postResponse.statusText
 				}).then(function(res) {
-					console.log('Mostrando Alerta de confirmacion ;)');
-				});
+	      		console.log(postResponse.statusText);
+	      	});
 			};
 			$scope.showAlert();
-		}, 
-    function(response) { // optional
-    	console.log('bien mal xD');
-    	$scope.showAlert = function() {
-    		$ionicPopup.alert({
-    			title: 'Informatica Compresores Servicios',
-    			content: ':( ERROR!!!! Informe a Roy'
-    		}).then(function(res) {
-    			console.log('Mostrando Alerta de error ;)');
-    		});
-    	};
-    	$scope.showAlert();
-    }
-    );		
-		$scope.reset();
+			$scope.reset();
+		})
+    .error(function(postResponse) { // ERROR
+    console.log('bien mal xD\n');
+      $scope.showAlert = function() {
+      	$ionicPopup.alert({
+      		title: 'Informatica Compresores Servicios',
+      		content: postResponse.statusText
+      	}).then(function(res) {
+      		console.log(postResponse.statusText);
+      	});
+      };
+      $scope.showAlert();
+    });
 	};
-
 });

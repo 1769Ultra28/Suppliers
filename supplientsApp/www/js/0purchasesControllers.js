@@ -78,7 +78,7 @@ $scope.processForm = function() {
 		error(function(postResponse) {
       // called asynchronously if an error occurs
       // or server returns response with an error status.
-      console.log('bien mal xD\n');
+      console.log('BIEN mal xD xD\n');
       $scope.showAlert = function() {
       	$ionicPopup.alert({
       		title: 'Informatica Compresores Servicios',

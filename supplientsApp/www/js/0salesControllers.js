@@ -64,7 +64,6 @@ $scope.processForm = function() {
 		})
 		.success(function(postResponse) {
 			console.log(postResponse.statusText);
-			console.log('BIEN PELAO>>>> USTED.... BIEN xD');
 			$scope.showAlert = function() {
 				$ionicPopup.alert({
 					title: 'Informatica Compresores Servicios',
@@ -77,7 +76,6 @@ $scope.processForm = function() {
 			$scope.reset();
 		})
     .error(function(postResponse) { // ERROR
-    console.log('bien mal xD\n');
       $scope.showAlert = function() {
       	$ionicPopup.alert({
       		title: 'Informatica Compresores Servicios',
